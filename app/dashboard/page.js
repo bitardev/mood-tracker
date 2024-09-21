@@ -7,7 +7,7 @@ export const metadata = {
   description: "Track your daily mood every day of the year!",
 };
 export default function DashboardPage() {
-  const isAtuthenticated = false;
+  const isAtuthenticated = true;
   let children = <Login />;
   if (isAtuthenticated) {
     children = <Dashboard />;
