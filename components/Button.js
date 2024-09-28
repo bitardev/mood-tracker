@@ -3,12 +3,13 @@ import React from "react";
 const fugaz = Fugaz_One({ subsets: ["latin"], weight: ["400"] });
 
 export default function Button(props) {
-  const { text, dark, full } = props;
+  const { text, dark, full, clickHandler } = props;
   return (
     <button
+      onClick={clickHandler}
       className={`border-solid rounded-full overflow-hidden border-2 border-indigo-600 duration-200 hover:opacity-60 ${
         dark ? "text-white bg-indigo-600 " : "text-indigo-600 "
-      } ${full ? 'grid place-items-center w-full':''}`}
+      } ${full ? "grid place-items-center w-full" : ""}`}
     >
       <p
         className={`${fugaz.className} px-6 sm:px-10 whitespace-nowrap py-2 sm:py-3`}
