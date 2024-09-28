@@ -6,7 +6,7 @@ import { useAuth } from "@/context/AuthContext";
 import { doc, setDoc } from "firebase/firestore";
 import { db } from "@/firebase";
 import Login from "./Login";
-import Loading from "./loading";
+import Loading from "./Loading";
 const fugaz = Fugaz_One({ subsets: ["latin"], weight: ["400"] });
 
 export default function Dashboard() {
@@ -102,7 +102,7 @@ export default function Dashboard() {
                 {status.replaceAll("_", " ")}
               </p>
               <p className={`${fugaz.className} text-base sm:text-lg truncate`}>
-                {statuses[status]} {status === 'num_days' ? ' 🔥':''}
+                {statuses[status]} {status === "num_days" ? " 🔥" : ""}
               </p>
             </div>
           );
